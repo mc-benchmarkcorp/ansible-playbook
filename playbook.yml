@@ -11,4 +11,5 @@
       docker_image:
         name: gcr.io/hello-world:latest
         source: pull
+        ports: 443:5000
         state: 'started'
