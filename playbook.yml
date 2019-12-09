@@ -7,9 +7,9 @@
         - docker.io
       become: yes
       become_user: root
-    - name: Pull an Image
-      docker_image:
-        name: gcr.io/hello-world:latest
-        source: pull
+    - name: Container app deployment
+      docker:
+        name: go-app
+        image: gcr.io/hello-world:latest
         ports: 443:5000
         state: 'started'
