@@ -5,6 +5,10 @@
       apt:
         pkg:
         - docker.io
-        - nginx
       become: yes
       become_user: root
+    - name: Pull an Image
+      docker_image:
+        name: gcr.io/hello-world:latest
+        source: pull
+        state: 'started'
