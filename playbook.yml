@@ -10,4 +10,4 @@
     - name: Container app deployment
       command: docker pull gcr.io/sandbox-259712/hello-world
     - name: Run app deployment
-      command: docker run -d -p 443:5000 gcr.io/sandbox-259712/hello-world
+      command: docker run -d -p 80:5000 gcr.io/sandbox-259712/hello-world
